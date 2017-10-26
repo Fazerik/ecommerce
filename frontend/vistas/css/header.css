@@ -1,0 +1,196 @@
+/*=====================================
+=            TOP 		       =
+======================================  */
+
+#top ul {
+	padding-top: 8px;
+}
+
+#top ul li {
+	display: inline;
+	line-height: 30px;
+	margin:0px 5px;
+	color: white;
+}
+
+.social ul li a i {
+	font-size: 18px;
+	margin:0px 1px;
+}
+
+.registro ul {
+	text-align: right;
+	font-size: 12px;
+}
+
+
+/*=====================================
+=            Nav bar 		       =
+======================================  */
+
+header #logotipo img {
+	padding: 20px 60px;
+	padding-left: 0px;
+}
+
+header #btnCategorias {
+	margin: 20px 0;
+	cursor: pointer;
+}
+
+header #btnCategorias:hover {
+	background: #e6e6e6;
+	color: black;
+}
+
+header #btnCategorias p {
+	line-height: 40px;
+	margin-bottom: 0px;
+}
+
+header #buscador {
+	margin:20px 0px;
+}
+
+header #buscador input{
+	padding:19px;
+	border-radius: 0;
+}
+
+header #buscador button {
+	padding: 9px;
+	border-radius: 0;
+
+}
+
+header #carro {
+	margin: 20px 0; 
+}
+
+header #carro button {
+	padding:9px 15px;
+	border:1px solid silver;
+	border-radius: 0;
+}
+
+header #carro p {
+	padding: 2px;
+	padding-left: 60px;
+	border:1px solid #aaa;
+	font-size: 12px;
+}
+
+header #categorias {
+	display: none;
+	margin-top: -10px;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+header #categorias h4 {
+	margin-top: 20px;
+	margin-bottom: -10px;
+}
+
+header #categorias hr {
+	border:1px solid rgba(255, 255, 255, .3)
+}
+
+/*=====================================
+=   ESCRITORIO GRANDE (LG : +-1366) 	  =
+======================================  */
+
+
+@media (min-width: 1200px) {
+	
+	/*HEADER*/
+	header #logotipo img {
+		padding: 20px 60px;
+		padding-left: 0px;
+	}
+
+	header #carro {
+		padding-left: 100px; 
+	}	
+}
+
+
+/*=====================================
+=   ESCRITORIO MEDIANO (MD : +-1024)   =
+======================================  */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	
+	/*HEADER*/
+	header #logotipo img {
+		padding: 25px 60px;
+		padding-left: 0px;
+	}
+
+	header #carro {
+		padding-left: 70px; 
+	}	
+}
+
+
+/*=====================================
+=   ESCRITORIO PEQUEÑO (SM : +-768) 	  =
+======================================  */
+
+@media (max-width: 991px) and (min-width: 768px) {
+	
+	/*HEADER*/
+	header #logotipo img {
+		padding: 30px 0px;
+	}
+
+	header #carro {
+		padding-left: 55px; 
+	}	
+
+	header #carro p{
+		display: none; 	 
+	}	
+}
+
+
+/*=====================================
+=  	 	MÓVIL (XS : +-320) 			  =
+======================================  */
+
+@media (max-width: 767px) {
+	
+	/*=====================================
+	=  	 	MÓVIL (XS : +-320) 			  =
+	======================================  */
+	header #logotipo img {
+		padding: 30px 30px;
+		padding-bottom: 10px;
+	}
+
+	header #carro {
+		margin: 0 0 1px 0; 
+		border-left: 0;
+	}	
+
+	header #carro button {
+		padding:9px 50px;
+		border-right: 0;
+	}	
+
+	header #buscador {
+		margin-bottom: 10px;
+	}
+
+	header #categorias {
+		margin-bottom: 10px;
+	}
+
+	#top ul {
+		text-align: center;
+	}
+
+	#top .registro {
+		border-top: 1px solid #222;
+	}
+}
