@@ -35,12 +35,14 @@
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plantilla.css">
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/header.css">
+	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/slide.css">
 	<!-- Fuentes -->
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 	<!-- Scripts -->
 	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.min.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plugins/bootstrap.min.js"></script>
+	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.easing.js"></script>
 
 </head>
 <body>
@@ -107,6 +109,14 @@
 			include "modulos/error404.php";
 		}
 	}
+	else
+	{
+		/*=============================================
+		=        	     SLIDE (INDEX)           =
+		=============================================*/
+
+		include "modulos/slide.php";
+	}
 
 	?>
 
@@ -114,5 +124,6 @@
 	
 	<script src="<?php echo $url; ?>vistas/js/header.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
+	<script src="<?php echo $url; ?>vistas/js/slide.js"></script>
 </body>
 </html>
