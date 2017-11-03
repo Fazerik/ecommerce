@@ -14,6 +14,12 @@
 
 				<?php 
 
+					/*=============================================
+					=             RUTA DEL SERVIDOR           =
+					=============================================*/
+					$urlServidor = Ruta::ctrRutaServidor();
+
+
 					$slides =  ControladorSlide::ctrMostrarSlide();
 
 					foreach ($slides as $slide) 
@@ -26,11 +32,11 @@
 
 						echo '<li>
 
-							<img src="http://localhost/ecommerce/backend/'.$slide["img_fondo"].'" alt="slide">
+							<img src="'.$urlServidor.$slide["img_fondo"].'" alt="slide">
 
 							<div class="slideOpciones '.$slide["tipo_slide"].'">
 
-								<img class="js-imgProducto" src="http://localhost/ecommerce/backend/'.$slide["img_producto"].'" alt="" style="top:'.$estiloImgProducto["top"].'; right:'.$estiloImgProducto["right"].'; width: '.$estiloImgProducto["width"].'; left: '.$estiloImgProducto["left"].';">
+								<img class="js-imgProducto" src="'.$urlServidor.$slide["img_producto"].'" alt="" style="top:'.$estiloImgProducto["top"].'; right:'.$estiloImgProducto["right"].'; width: '.$estiloImgProducto["width"].'; left: '.$estiloImgProducto["left"].';">
 
 								<div class="textosSlide" style="top:'.$estitloTextoSlide["top"].'; right:'.$estitloTextoSlide["right"].'; width: '.$estitloTextoSlide["width"].'; left: '.$estitloTextoSlide["left"].';">
 

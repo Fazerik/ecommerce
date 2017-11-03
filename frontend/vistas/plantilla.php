@@ -12,17 +12,22 @@
 	<!-- ícono -->
 	<?php 
 
-	$icono = ControladorPlantilla::ctrEstiloPlantilla();
+		/*=============================================
+		=             RUTA DEL PROYECTO           =
+		=============================================*/		
+		$url = Ruta::ctrRuta();
 
-	echo '<link rel="icon" href="http://localhost/ecommerce/backend/'.$icono["icono"].'">';
+		/*=============================================
+		=             RUTA DEL SERVIDOR           =
+		=============================================*/
+		$urlServidor = Ruta::ctrRutaServidor();
 
-	/*=============================================
-	=             RUTA DEL PROYECTO           =
-	=============================================*/
-	
-	$url = Ruta::ctrRuta();
+		/*=============================================
+		=             ÍCONO DE PESTAÑA           =
+		=============================================*/
+		$icono = ControladorPlantilla::ctrEstiloPlantilla();
+		echo '<link rel="icon" href="'.$urlServidor.$icono["icono"].'">';
 
-	var_dump($url);
 
 	?>	
 
