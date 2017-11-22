@@ -23,3 +23,40 @@ $.ajax({
 });
 
 /*=====  End of PANTILLA  ======*/
+
+
+
+/*==========================================
+=            LISTA / CUADRÍCULA            =
+==========================================*/
+
+// var btnList = $('.btnList');
+// $('#btnGrid0').click(function() {
+//     $('.list0').toggleClass('hidden');
+//     $('.grid0').toggleClass('hidden');
+// });
+
+// $('#btnList0').click(function() {
+//     $('.grid0').toggleClass('hidden');
+//     $('.list0').toggleClass('hidden');
+// });
+
+$('.btnGrid, .btnList').click(function(event) {
+    var btnActual = $(this),
+        btnHermano = $(this).siblings('button'),
+        id = btnActual.attr("id").substr(-1);
+
+        $(btnActual).addClass('backColor').css('color', 'white');;
+        $(btnHermano).attr('style', '').removeClass('backColor');
+
+        if ($(this).hasClass('btnList')) {
+            $('.grid' + id).addClass('hidden');
+            $('.list' + id).removeClass('hidden');            
+        } else {
+            $('.list' + id).addClass('hidden');
+            $('.grid' + id).removeClass('hidden'); 
+        }
+
+});
+
+/*=====  End of LISTA / CUADRÍCULA  ======*/

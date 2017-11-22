@@ -5,8 +5,7 @@
 .banner {
 	position: relative;
 	overflow: hidden;
-	height: 260px;
-
+	margin-top: 10px;
 }
 
 .banner .textoBanner {
@@ -108,4 +107,122 @@
 .productos ul li div.enlaces button i {
 	color: #999;
 	font-size: 12px;
+}
+
+/*=============================================
+=		VITRINA PRODUCTOS   CUADRÍCULA 		 =
+=============================================*/	
+
+.productos ul li h1 {
+	margin-top: -10px;
+}
+
+.productos ul li h1 small {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.productos ul li h1 small a {
+	color: #777;
+}
+
+.oferta {
+	text-decoration:line-through;
+	color: #B0A8A8;
+	font-size: 15px;
+}
+
+.fontSize {
+	font-size: 11px;
+}
+
+/*=====================================
+=   ESCRITORIO GRANDE (LG : +-1366) 	  =
+======================================  */
+
+
+@media (min-width: 1200px) {
+
+	.banner {
+		height: 260px;
+	}
+}
+
+
+/*=====================================
+=   ESCRITORIO MEDIANO (MD : +-1024)   =
+======================================  */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+
+}
+
+
+/*=====================================
+=   ESCRITORIO PEQUEÑO (SM : +-768) 	  =
+======================================  */
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+
+/*=====================================
+=  	 	MÓVIL (XS : +-320) 			  =
+======================================  */
+
+@media (max-width: 767px) {
+
+	.banner {
+		height: 100px;
+	}
+
+	.banner .textoDer,
+	.banner .textoCentro,
+	.banner .textoIzq {
+		top: 7px;
+		left:50%;
+		width: 800px;
+		margin-left: -400px;
+		text-align: center;
+		text-shadow: 2px 2px 20px #000;
+	}
+
+	.textoBanner h1 {
+		font-size: 20px;
+		line-height: 5px;
+	}
+
+	.textoBanner h2 {
+		font-size: 20px;
+		line-height: 5px;
+	}	
+
+	.textoBanner h3 {
+		font-size: 15px;
+		line-height: 5px;
+	} 
+	
+	.tituloDestacado,
+	.productos {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.tituloDestacado h1 {
+		text-align: center;
+		font-size: 30px;		
+	}
+
+	.tituloDestacado button {		
+		float: none !important;
+	}
+
+	.productos ul li h1 small {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+}
 }

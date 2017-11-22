@@ -58,4 +58,28 @@ class ModeloProductos
 		
 		$stmt = null;
 	}
+
+	/*==========================================
+	=            OBTENER PRODUCTOS         =
+	==========================================*/
+
+	static public function mdlMostrarProductos($tabla, $selector, $item, $valor)
+	{
+		if ($item != null) 
+		{
+			$stmt = Conexion::conectar() -> prepare("SELECT * FROM $tabla WHERE $item = :$item ORDER BY $selector DESC LIMIT 4");
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+			
+		} 
+		else 
+		{
+			$stmt = Conexion::conectar() -> prepare("SELECT * FROM $tabla ORDER BY $selector DESC LIMIT 4");
+		}
+
+		$stmt -> execute(); 
+		return $stmt -> fetchAll();
+
+		$stmt -> close();
+		$stmt = null;
+	}
 }

@@ -107,7 +107,7 @@
 		=             LISTA BLANCA URL'S           =
 		=============================================*/
 
-		if ($ruta != null) 
+		if ($ruta != null || $rutas[0] == "articulos-gratis" || $rutas[0] == "mas-vendidos" || $rutas[0] == "mas-vistos") 
 		{
 			include "modulos/productos.php";
 		}
